@@ -1,0 +1,39 @@
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            string password = "ABC";
+            string input = "";
+            int inputCount = 0;
+            int inputLimit = 3;
+            bool outOfInput = false;
+
+            while (password != input && !outOfInput)
+            {
+                if (inputCount < inputLimit)
+                {
+                    Console.Write("Enter the Pass: ");
+                    input = Console.ReadLine();
+                    inputCount++;
+                }
+
+                else
+                {
+                    outOfInput = true;
+                }
+            
+            }
+            if (outOfInput)
+            {
+                Console.Write("Ban 3days!");
+            }
+            else
+            {
+                Console.Write("Good!");
+            }
+
+            Console.ReadLine();
+
+        }
+
+    }
